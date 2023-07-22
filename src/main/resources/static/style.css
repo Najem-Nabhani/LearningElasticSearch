@@ -1,0 +1,19 @@
+.header, .subheader {
+    text-align: center;
+}
+
+.row-container {
+     display: flex;
+     align-items: baseline;
+     gap: .5rem;
+}
+
+.results-grid {
+    display: grid;
+}
+
+.post {
+  margin: 1rem;
+  padding: 10px;
+  border: 3px solid black;
+}

@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Search Result</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+    <body>
+        <h1 class="header">Bloogle</h1>
+
+        <h2 th:text="${errorMessage}"/>
+        <h2 th:text="${successMessage}"/>
+
+        <div class="results-grid">
+            <div class="post" th:each="blog:${blogs}">
+                <h3 th:text="${blog.title}"/>
+                <p th:text="${blog.story}"/>
+            </div>
+        </div>
+    </body>
+</html>

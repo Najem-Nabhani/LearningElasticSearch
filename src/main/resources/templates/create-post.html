@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Blog Post</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <h1 class="header">Median</h1>
+    <p class="subheader">A Medium Knockoff for creating Blogs</p>
+
+    <form action="/submit-post" method="get">
+        <div class="row-container">
+            <p>Blog Title:</p>
+            <input type="text" name="title">
+        </div>
+
+        <div>
+            <p>What's Your Story?</p>
+            <textarea name="story"></textarea>
+        </div>
+
+        <div class="row-container">
+            <p>Add any number of categories separated by a comma (,) </p>
+            <input type="text" name="categories" pattern="[A-Za-z,]*">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

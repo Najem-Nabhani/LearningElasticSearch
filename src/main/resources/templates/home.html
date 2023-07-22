@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bloogle</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+    <script type="text/javascript">
+        function navigateToSearchForTitleInput() {
+            const titlePrefix = document.getElementById('title-input').value;
+            window.location='filtered-blogs/' + titlePrefix;
+        }
+
+        function navigateToSearchForSelectedCategory() {
+            const selectedCategory = document.getElementById('categories-dropdown-list').value;
+            window.location='filtered-blogs?category=' + selectedCategory;
+        }
+    </script>
+    <body>
+        <h1 class="header">Bloogle</h1>
+        <p class="subheader">A Fake Google for Blogs</p>
+
+        <div class="row-container">
+            <p>Search a blog by title:</p>
+            <input id='title-input' type="text">
+            <button type="button" class="btn" onclick="navigateToSearchForTitleInput()"> > </button>
+        </div>
+
+        <div class="row-container">
+            <p>Search blogs by category:</p>
+            <select id="categories-dropdown-list">
+                <option th:each="category:${categories}" th:text="${category.name}" th:value="${category.name}"/>
+            </select>
+            <button type="button" class="btn" onclick="navigateToSearchForSelectedCategory()"> > </button>
+        </div>
+
+        <footer>
+            <a href="create-post"><button>Create a blog post!</button></a>
+        </footer>
+    </body>
+</html>

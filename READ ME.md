@@ -17,3 +17,8 @@
 >GET /{indexname}/_doc/{id}
 
 >GET {indexname}/_search?q={queryparams
+
+## Resources
+As I was learning I found many resources to contain legacy/deprecated info. I found the following main resources to be most useful:
+1. https://www.elastic.co/guide/en/elasticsearch/reference/8.8/full-text-queries.html
+1. https://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/#repositories.custom-implementations
